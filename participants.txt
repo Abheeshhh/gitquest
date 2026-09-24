@@ -1,0 +1,10 @@
+# Participant registry — coordinator fills this in before/during the event.
+# One line per participant: github_username,team,display_name
+# Lines starting with # are ignored.
+#
+# The github_username must be the account that forked this repo, and their
+# fork must be named "gitquest" (i.e. they used the Fork button, not
+# "Use this template") and be public, on branch "main".
+#
+# Example:
+# octocat,team1,Ravi

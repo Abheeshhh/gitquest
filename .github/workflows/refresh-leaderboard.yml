@@ -1,0 +1,43 @@
+name: Refresh Leaderboard
+
+on:
+  schedule:
+    # 5 minutes is the shortest interval GitHub allows for scheduled Actions.
+    # GitHub may still delay a run by a few minutes under load — for a truly
+    # instant update at a specific moment, use "Run workflow" below instead
+    # of waiting for the schedule.
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "participants.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch every participant's progress and rebuild leaderboard
+        run: python3 scripts/refresh_leaderboard.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "gitquest-bot"
+          git config user.email "gitquest-bot@users.noreply.github.com"
+          git add LEADERBOARD.md
+          if git diff --cached --quiet; then
+            echo "No leaderboard changes."
+          else
+            git commit -m "Auto-update leaderboard"
+            git push
+          fi
