@@ -8,7 +8,7 @@ Fill this in inside YOUR OWN FORK. Check the box (`[ ]` → `[x]`) when you fini
 - [x] Q2 (10 pts) — First Save
 - [x] Q3 (15 pts) — Branch Out
 - [x] Q4 (15 pts) — Bring It Together
-- [ ] Q5 (30 pts) — The Clash
+- [x] Q5 (30 pts) — The Clash
 - [x] Q6 (15 pts) — Save For Later
 - [ ] Q7 (20 pts) — Undo Buttons
 - [ ] Q8 (15 pts) — Detective Work
