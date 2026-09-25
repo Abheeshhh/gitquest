@@ -6,7 +6,7 @@ Fill this in inside YOUR OWN FORK. Check the box (`[ ]` → `[x]`) when you fini
 
 - [x] Q1 (5 pts) — Wake Up
 - [x] Q2 (10 pts) — First Save
-- [ ] Q3 (15 pts) — Branch Out
+- [x] Q3 (15 pts) — Branch Out
 - [ ] Q4 (15 pts) — Bring It Together
 - [ ] Q5 (30 pts) — The Clash
 - [ ] Q6 (15 pts) — Save For Later
